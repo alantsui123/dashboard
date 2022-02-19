@@ -1,0 +1,28 @@
+*{margin: 0px; padding: 0px;}
+body{background: skyblue;}
+#header {width:100%; height:80px; background: #333; box-shadow: 0px 2px 4px gray;}
+#navbar {width: 1000px; height: 80px; float: right;}
+#navbar>li {width: 190px; list-style: none; float: left; border-right: 1px solid gray; border-left: 1px solid gray;}
+li>a {display: block; color: white; line-height: 80px; text-align: center; font-family: cursive; font-size: 20px; text-decoration: none;}
+#logo{width: 200px; height: 80px; float: left; padding-left: 40px;}
+li>a:hover, li>a:focus {background: skyblue; color: #333;}
+
+
+@media screen and (max-width: 1260px) {
+  #navbar {width: 800px;}
+  #navbar>li {width: 150px;}
+  #logo>img{width: 150px; height: 80px;}
+}
+@media screen and (max-width: 1060px) {
+  #header {width:100%; height:60px; }
+  #navbar {width: 100%; height: 60px; float: right; position: relative; top: 80px; }
+  #navbar>li {width: 18%; }
+  li>a {line-height: 60px; font-size: 16px;}
+  #logo{width: 200px; height: 80px; float: left; padding-left: 40px; position: absolute; top: -80px;}
+}
+@media screen and (max-width: 480px) {
+  #header {width:100%; height:60px; }
+  #navbar {width: 100%; height: 60px; float: none;}
+  #navbar>li {width: 100%; list-style: none; float: none; border-bottom: 1px solid skyblue;}
+  li>a {display: block; color: white; line-height: 60px; font-size: 16px; background: #333;}
+}
