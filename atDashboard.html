@@ -1,0 +1,179 @@
+<!DocType html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Alan Tsui Admin | Dashboard</title>
+  <LINK href="css/atStyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <header>
+    <div class="container-fluid" style="background-color:#428bca;color:#fff;height:100px;">
+      <div>
+        <!--
+        <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="float:left;width:80%;max-width: 64px;">
+        <picture style="float:left;width:80%;max-width: 64px;">
+          <source media="(min-width: 650px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <source media="(min-width: 465px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="width:auto;">
+        </picture>
+-->
+        <picture style="float:left;width:80%;max-width: 64px;">
+          <source media="(min-width: 650px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <source media="(min-width: 465px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="width:auto;">
+        </picture>
+        <h1>Alan Tsui</h1>
+        <p class="subTitle">Manage your web stie</p>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="80">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Alan Tsui</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="atDashboard.html">Dashboard</a></li>
+              <li><a href="atPages.html">Pages</a></li>
+              <li><a href="atPosts.html">Posts</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="atMain.html">Main</a></li>
+                  <li><a href="atUsers.html">Users</a></li>
+                  <li><a href="atUsersUpdate.html">Add Users</a></li>
+                  <li><a href="atUsersJSON.html">View Users (Json format)</a></li>
+                  <li><a href="atViewImages.html">View Images (api.flickr.com)</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Welcome, Guest</a></li>
+              <li><a href="atLogin.html">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </nav>
+  <section id="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li class="active">Dashboard</li>
+      </ol>
+    </div>
+  </section>
+  <section id="main">
+    <article>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            <div class="list-group">
+              <a href="atDashboard.html" class="list-group-item active main-color-bg" style="background-color:#428bca;">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+              </a>
+              <a href="atPages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                Pages <span class="badge">12</span></a>
+              <a href="atPosts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+                Posts <span class="badge">33</span></a>
+              <a href="atUsers.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                Users <span class="badge">203</span></a>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <!-- Website Overview -->
+            <div class="panel panel-default">
+              <div class="panel-heading main-color-bg">
+                <h3 class="panel-title">Website Overview</h3>
+              </div>
+              <div class="panel-body">
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> 12</h2>
+                    <h4>Pages</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 33</h2>
+                    <h4>Posts</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-user" aria-hidden="true"></span> 203</h2>
+                    <h4>Users</h4>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="well dash-box">
+                    <h2><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> 12,334</h2>
+                    <h4>Visitors</h4>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Latest Users</h3>
+              </div>
+              <div class="panel-body">
+                <table class="table table-striped table-hover" id="atUser">
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Joined</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- Footer -->
+
+  <footer class="page-footer font-small indigo">
+    <div class="text-center">Contact information:
+      <a href="mailto:alantsui999@hotmail.com"> alantsui999@Hotmail.com</a>
+    </div>
+    <div class="footer-copyright text-center py-3">&copy; 2018 Copyright:
+      <a href="https://atapp-c7c5e.firebaseapp.com/#"> Alan Tsui</a>
+    </div>
+  </footer>
+  <script>
+    $(document).ready(function () {});
+    /*
+    $(window).resize(function() {
+    pagesized = $(window).innerWidth() / 30; // Proportionate font size to page
+    pagesized = Math.max(pagesized, 14); // Set size to be no less than 14 px
+    pagesized = Math.min(pagesized, 30); // & No greater than 30 px
+    $('body').css('font-size', pagesized); // Set body default font size
+   });
+   */
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>

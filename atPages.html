@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+  <title>Alan Tsui Admin | Pages</title>
+  <LINK href="css/atStyle.css" rel="stylesheet" type="text/css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <header>
+    <div class="container-fluid" style="background-color:#428bca;color:#fff;height:100px;">
+      <div>
+        <!--
+        <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="float:left;width:80%;max-width: 64px;">
+        <picture style="float:left;width:80%;max-width: 64px;">
+          <source media="(min-width: 650px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <source media="(min-width: 465px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="width:auto;">
+        </picture>
+-->
+        <picture style="float:left;width:80%;max-width: 64px;">
+          <source media="(min-width: 650px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <source media="(min-width: 465px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="width:auto;">
+        </picture>
+        <h1>Alan Tsui</h1>
+        <p class="subTitle">Manage your web stie</p>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Alan Tsui</a>
+        </div>
+        <div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Dashboard</a></li>
+              <li><a href="atPages.html">Pages</a></li>
+              <li><a href="atPosts.html">Posts</a></li>
+              <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="atMain.html">Main</a></li>
+                  <li><a href="atUsers.html">Users</a></li>
+                  <li><a href="atUsersUpdate.html">Add Users</a></li>
+                  <li><a href="atUsersJSON.html">View Users (Json format)</a></li>
+                  <li><a href="atViewImages.html">View Images (api.flickr.com)</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </nav>
+  <section id="breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Dashboard</a></li>
+        <li class="active">Pages</li>
+      </ol>
+    </div>
+  </section>
+  <section id="main">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="list-group">
+            <a href="index.html" class="list-group-item active main-color-bg" style="background-color:#428bca;">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
+            </a>
+            <a href="atPages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+              Pages <span class="badge">12</span></a>
+            <a href="atPosts.html" class="list-group-item"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+              Posts <span class="badge">33</span></a>
+            <a href="atUsers.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              Users <span class="badge">203</span></a>
+          </div>
+
+          <div class="well">
+            <h4>Disk Space Used</h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                style="width: 60%;">
+                60%
+              </div>
+            </div>
+            <h4>Bandwidth Used </h4>
+            <div class="progress">
+              <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"
+                style="width: 40%;">
+                40%
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <!-- Website Overview -->
+          <div class="panel panel-default">
+            <div class="panel-heading main-color-bg">
+              <h3 class="panel-title">Pages</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-inline">
+                    <div class="form-group">
+                      <input id="search" class="search form-control" type="text" placeholder="Filter Pages  ..." style="width:300px;">
+                      <span class="counter pull-right"></span>
+                    </div>
+                    <div class="form-group" style="width:200px;float:right">
+                      <div id='download' class='dld'>
+                        <button type="button" class="btn btn-success" onclick="addRow()">Add Row</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+                <table id="mytable" class="table table-bordered table-stripped paginated results">
+                <thead>
+                  <tr>
+                    <th>Topic</th>
+                    <th>Is Published</th>
+                    <th>Created on</th>
+                    <th>Photos Attached</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="pages">
+                  <tr>
+                    <td>Bootstrap</td>
+                    <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                    <td>2019-01-23</td>
+                    <td>Yes</td>
+                    <td><span class="glyphicon glyphicon-trash" style="color:red"> Delete</span></td>
+                  </tr>
+                  <tr>
+                    <td>Javascript</td>
+                    <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                    <td>2019-01-14</td>
+                    <td>No</td>
+                    <td><span class="glyphicon glyphicon-trash" style="color:red"> Delete</span></td>
+                  </tr>
+                  <tr>
+                    <td>HTML 5</td>
+                    <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                    <td>2019-01-21</td>
+                    <td>No</td>
+                    <td><span class="glyphicon glyphicon-trash" style="color:red"> Delete</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="page-footer font-small indigo">
+    <div class="text-center">Contact information:
+      <a href="mailto:alantsui999@hotmail.com"> alantsui999@Hotmail.com</a>
+    </div>
+    <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
+      <a href="https://atapp-c7c5e.firebaseapp.com/#"> Alan Tsui</a>
+    </div>
+  </footer>
+
+  <!-- Modals -->
+
+  <!-- Add Page -->
+  <div class="modal fade" id="addPage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form>
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Add Page</h4>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Page Title</label>
+              <input type="text" class="form-control" placeholder="Page Title">
+            </div>
+            <div class="form-group">
+              <label>Page Body</label>
+              <textarea name="editor1" class="form-control" placeholder="Page Body"></textarea>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> Published
+              </label>
+            </div>
+            <div class="form-group">
+              <label>Meta Tags</label>
+              <input type="text" class="form-control" placeholder="Add Some Tags...">
+            </div>
+            <div class="form-group">
+              <label>Meta Description</label>
+              <input type="text" class="form-control" placeholder="Add Meta Description...">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/atPages.js">
+
+  </script>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+ </body>
+
+</html>

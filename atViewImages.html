@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Alan Tsui Admin | View Images</title>
+  <style>
+  img {
+    height: 100px;
+    float: left;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<div id="images"></div>
+ 
+<script>
+(function() {
+    var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $.getJSON( flickerAPI, {
+    tags: "mount rainier",
+    tagmode: "any",
+    format: "json"
+  })
+    .done(function( data ) {
+      $.each( data.items, function( i, item ) {
+        $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+        if ( i === 3 ) {
+          return false;
+        }
+      });
+    });
+})();
+
+/*
+$.getJSON( "test.js", function( json ) {
+  console.log( "JSON Data: " + json.users[ 3 ].name );
+ });
+
+$.getJSON( "test.js", { name: "John", time: "2pm" } )
+  .done(function( json ) {
+    console.log( "JSON Data: " + json.users[ 3 ].name );
+  })
+  .fail(function( jqxhr, textStatus, error ) {
+    var err = textStatus + ", " + error;
+    console.log( "Request Failed: " + err );
+});
+*/
+</script>
+ 
+</body>
+</html>

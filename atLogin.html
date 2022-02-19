@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://cdn.ckeditor.com/4.6.1/standard/ckeditor.js"></script>
+  <title>Alan Tsui Admin | Login</title>
+  <LINK href="css/atStyle.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+  <header>
+    <div class="container-fluid" style="background-color:#428bca;color:#fff;height:100px;">
+      <div>
+        <!--
+        <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="float:left;width:80%;max-width: 64px;">
+        <picture style="float:left;width:80%;max-width: 64px;">
+          <source media="(min-width: 650px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <source media="(min-width: 465px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="width:auto;">
+        </picture>
+-->
+        <picture style="float:left;width:80%;max-width: 64px;">
+          <source media="(min-width: 650px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <source media="(min-width: 465px)" srcset="images/camping_hand_drawn/camping_hand_drawn_5364.png">
+          <img src="images/camping_hand_drawn/camping_hand_drawn_5364.png" alt="Alan Tsui" style="width:auto;">
+        </picture>
+        <h1>Alan Tsui</h1>
+        <p class="subTitle">Manage your web stie</p>
+      </div>
+    </div>
+  </header>
+  <nav>
+    <nav>
+      <nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="197">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Alan Tsui</a>
+          </div>
+          <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+              <ul class="nav navbar-nav">
+                <li><a href="index.html">Dashboard</a></li>
+                <li><a href="atPages.html">Pages</a></li>
+                <li><a href="atPosts.html">Posts</a></li>
+                <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="atUsers.html">Users</a></li>
+                    <li><a href="#Registration">Registration</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </nav>
+    <section id="breadcrumb">
+      <div class="container">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Dashboard</a></li>
+          <li class="active">Login</li>
+        </ol>
+      </div>
+    </section>
+    <section id="main">
+      <div class="main-login">
+        <div class="container">
+          <p class="h2 text-center text-primary">Show Login Form</p>
+          <form class="mt-5 myform">
+            <div class="text-center">
+              <img src="images/address-icon.png" alt="User logo" width="90" height="60">
+              <h2 class="mt-2 font-weight-normal">Sign-in</h2>
+            </div>
+            <div class="form-group mt-5">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Email address" required>
+            </div>
+            <div class="form-group mt-5">
+              <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-check">
+              <label>
+                <input type="checkbox" class="form-check-input" name="" value=""> Remember Me
+              </label>
+            </div>
+            <button type="submit" name="signin" class="mt-2 btn btn-primary btn-block" disabled title="Sign-in option has been disabled">Sign-in</button>
+            <p class="mt-5 text-center text-info">Create Account (Google Firebase)</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer class="page-footer font-small indigo">
+      <div class="text-center">Contact information:
+        <a href="mailto:alantsui999@hotmail.com"> alantsui999@Hotmail.com</a>
+      </div>
+      <div class="footer-copyright text-center py-3">&copy; 2019 Copyright:
+        <a href="https://atapp-c7c5e.firebaseapp.com/#"> Alan Tsui</a>
+      </div>
+    </footer>
+    <script>
+      CKEDITOR.replace('editor1');
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
